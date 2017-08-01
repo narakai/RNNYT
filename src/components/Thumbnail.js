@@ -16,13 +16,12 @@ const Thumbnail = ({url, titleText, accentColor, style}) => {
                         uri: url
                     }}>
                     <Title style={styles.title}>{titleText}</Title>
-                </Image> ) : (
+                </Image>):(
                 <View
                     style={[styles.image, imageStyle]}>
                     {TitleComponent}
                 </View>
             )}
-
         </View>
     );
 };
