@@ -47,15 +47,25 @@ export default class NewsItem extends Component {
         );
     }
 }
+NewsItem.defaultProps = {
+    title: 'Packt Publishing',
+    imageUrl: 'https://www.packtpub.com/sites/default/files/packt_logo.png',
+    description: 'Stay Relevant',
+    date: new Date(),
+    author: 'Packt Publishing',
+    location: 'Birmingham, UK',
+    url: 'https://www.packtpub.com/'
+};
+
 NewsItem.propTypes = {
     imageUrl: PropTypes.string,
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
-    date: PropTypes.instanceOf(Date).isRequired,
+    date: PropTypes.instanceOf(Date),
     author: PropTypes.string.isRequired,
     location: PropTypes.string,
     index: PropTypes.number.isRequired,
-    onPress: PropTypes.func.isRequired,
+    onPress: PropTypes.func,
     style: View.propTypes.style
 };
 const styles = StyleSheet.create({
